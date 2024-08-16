@@ -45,7 +45,7 @@ export default defineNuxtConfig({
   fonts: {
     families: [
       {
-        name: 'Montserrat Variable',
+        name: 'Montserrat',
         provider: 'fontsource',
         weights: ['400', '500', '600', '700', '800', '900'],
       },
