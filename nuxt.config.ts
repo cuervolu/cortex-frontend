@@ -2,23 +2,23 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  vite:{
+  vite: {
     optimizeDeps: {
-      exclude: ['vee-validate']
-    }
+      exclude: ['vee-validate'],
+    },
   },
   modules: [
-    "nuxt-codemirror",
-    "@nuxtjs/tailwindcss",
-    "@pinia/nuxt",
-    "@vueuse/nuxt",
-    "@nuxtjs/color-mode",
-    "@nuxt/eslint",
-    "@nuxtjs/mdc",
-    "@vee-validate/nuxt",
-    "@nuxt/fonts",
-    "@nuxtjs/seo",
-    "shadcn-nuxt"
+    'nuxt-codemirror',
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
+    '@vueuse/nuxt',
+    '@nuxtjs/color-mode',
+    '@nuxt/eslint',
+    '@nuxtjs/mdc',
+    '@vee-validate/nuxt',
+    '@nuxt/fonts',
+    '@nuxtjs/seo',
+    'shadcn-nuxt',
   ],
   srcDir: 'src',
   shadcn: {
@@ -36,10 +36,19 @@ export default defineNuxtConfig({
     storesDirs: ['src/stores/**'],
   },
   tailwindcss: {
-    cssPath: ['~/assets/css/tailwind.css', {injectPosition: 'first'}],
+    cssPath: ['~/assets/css/tailwind.css', { injectPosition: 'first' }],
     configPath: 'tailwind.config.js',
   },
   colorMode: {
     classSuffix: '',
   },
-})
+  fonts: {
+    families: [
+      {
+        name: 'Montserrat Variable',
+        provider: 'fontsource',
+        weights: ['400', '500', '600', '700', '800', '900'],
+      },
+    ],
+  },
+});
